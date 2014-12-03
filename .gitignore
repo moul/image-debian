@@ -8,3 +8,4 @@ sd*.raw*
 rootfs*
 */*.tar
 */*.built
+docker-rules.mk
