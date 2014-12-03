@@ -8,7 +8,7 @@ DESCRIPTION =		Debian Wheezy (7.7)
 SOURCE_URL =		https://github.com/online-labs/image-debian
 
 
-## Image tools
+## Image tools  (https://github.com/online-labs/image-tools)
 all:	docker-rules.mk
 docker-rules.mk:
 	wget https://raw.githubusercontent.com/online-labs/image-tools/master/docker-rules.mk
