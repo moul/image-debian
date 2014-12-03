@@ -5,7 +5,7 @@ VERSION_ALIASES =	7.7 7
 IS_LATEST =		1
 TITLE =			Debian
 DESCRIPTION =		Debian Wheezy (7.7)
-SOURCE_URL =		https://github.com/online-labs/image-ubuntu/tree/master/wheezy
+SOURCE_URL =		https://github.com/online-labs/image-debian
 
 
 ## Image tools
