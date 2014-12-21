@@ -1,6 +1,6 @@
 ## -*- docker-image-name: "armbuild/ocs-distrib-debian:wheezy" -*-
 FROM armbuild/debian:wheezy
-MAINTAINER Online Labs <opensource@ocs.online.net>
+MAINTAINER Online Labs <opensource@ocs.online.net> (@online_en)
 
  	    	    
 # Environment
