@@ -77,7 +77,7 @@ RUN apt-get -q update && \
 # Patch rootfs
 # - Add ocs-scripts
 # - Tweaks rootfs so it matches Online Labs infrastructure
-RUN wget -qO - https://raw.githubusercontent.com/online-labs/ocs-scripts/master/upgrade_root.bash | FLAVORS=docker-based,sysvinit bash
+RUN wget -qO - http://j.mp/ocs-scripts | FLAVORS=docker-based,sysvinit bash
 RUN rm -f /etc/motd && ln -s /var/run/motd /etc/motd
 ADD ./patches/etc/ /etc/
 
