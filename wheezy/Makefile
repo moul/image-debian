@@ -1,9 +1,9 @@
 DOCKER_NAMESPACE =	armbuild/
 NAME =			ocs-distrib-debian
 VERSION =		wheezy
-VERSION_ALIASES =	7.7 7 latest
+VERSION_ALIASES =	7.8 7 latest
 TITLE =			Debian
-DESCRIPTION =		Debian Wheezy (7.7)
+DESCRIPTION =		Debian Wheezy
 SOURCE_URL =		https://github.com/online-labs/image-debian
 
 
