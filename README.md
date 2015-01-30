@@ -1,4 +1,4 @@
-Official Debian images on Online Labs [![Build Status](https://travis-ci.org/online-labs/image-debian.svg?branch=debian-wheezy-2015.01.19)](https://travis-ci.org/online-labs/image-debian)
+Official Debian images on Online Labs [![Build Status](https://travis-ci.org/online-labs/image-debian.svg?branch=master)](https://travis-ci.org/online-labs/image-debian)
 =====================================
 
 Scripts to build the official Debian images on Online Labs
