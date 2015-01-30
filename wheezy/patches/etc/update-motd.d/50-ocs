@@ -33,7 +33,7 @@ if [[ $KERNEL_VERSION =~ ^3\.1[78]\.[0-9]+-[0-9]+ ]]; then
     KERNEL_SUGGESTION="For greater performances, use the Marvell 3.2.34 kernel instead"
 fi
 if [[ $KERNEL_VERSION =~ ^3\.2\.[35][24].* ]]; then
-    KERNEL_TITLE="- Marvell (Prioritary)"
+    KERNEL_TITLE="- Marvell (Proprietary)"
     KERNEL_DESCRIPTION="This kernel has the best performances on this hardware"
     KERNEL_SUGGESTION="For mainline kernel with latest features and plenty of modules, use a 3.17 kernel instead"
 fi
