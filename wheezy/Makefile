@@ -8,8 +8,8 @@ SOURCE_URL =		https://github.com/online-labs/image-debian
 
 
 ## Image tools  (https://github.com/online-labs/image-tools)
-all:	docker-rules.mk
-docker-rules.mk:
-	wget -qO - http://j.mp/image-tools | bash
--include docker-rules.mk
+all:    ../docker-rules.mk
+../docker-rules.mk:
+	$(MAKE) -C .. docker-rules.mk
+-include ../docker-rules.mk
 ## Below you can add custom makefile commands and overrides
