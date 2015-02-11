@@ -25,6 +25,7 @@ RUN apt-get -q update && \
     apt-get -y -qq upgrade && \
     apt-get install -y -qq \
 	bash-completion \
+	bc \
 	ca-certificates \
 	cron \
 	curl \
@@ -61,6 +62,7 @@ RUN apt-get -q update && \
 	rsync \
 	rsyslog \
 	screen \
+	shunit2 \
 	socat \
 	ssh \
 	sudo \
