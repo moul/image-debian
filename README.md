@@ -5,6 +5,8 @@ Scripts to build the official Debian images on Online Labs
 
 These images are built using [Image Tools](https://github.com/online-labs/image-tools) and depends on the [armhf port of debian docker images](https://registry.hub.docker.com/u/armbuild/debian/) and scripts from [ocs-scripts](https://github.com/online-labs/ocs-scripts).
 
+<img src="http://upload.wikimedia.org/wikipedia/commons/4/4a/Debian-OpenLogo.svg" width="100px" />
+
 ---
 
 **This image is meant to be used on a C1 server.**
@@ -37,3 +39,7 @@ Links
 - [Community: Official Debian Image](https://community.cloud.online.net/t/official-debian-image/344/11?u=manfred)
 - [Community: New Linux Distributions on C1](https://community.cloud.online.net/t/official-new-linux-distributions-ubuntu-coreos-centos-fedora-arch-linux/229?u=manfred)
 - [Image on Docker registry](https://registry.hub.docker.com/u/armbuild/ocs-distrib-debian/)
+
+---
+
+A project by [![Online Labs](https://raw.githubusercontent.com/online-labs/doc.cloud.online.net/master/www/documentation/docs_public/contents/images/logo_footer.png)](http://labs.online.net/)
