@@ -10,13 +10,11 @@ ENV OCS_BASE_IMAGE armbuild/ocs-debian:wheezy
 
 
 # Patch rootfs for docker-based builds
-RUN apt-get -q update && \
-    apt-get -y -qq install wget lsb-release && \
-    apt-get clean && \
-    wget --no-check-certificate https://codeload.github.com/online-labs/ocs-scripts/tar.gz/master -O /tmp/builder-enter.tgz && \
-    tar --strip=2 -C / -xzvf /tmp/builder-enter.tgz ocs-scripts-master/skeleton-docker-based/usr/local/sbin/builder-enter && \
-    rm -f /tmp/builder-enter.tgz && \
-    /usr/local/sbin/builder-enter
+RUN apt-get -y -q update \
+ && apt-get -y -qq install bash curl lsb-release tar \
+ && apt-get -y clean \
+ && curl -Lq http://j.mp/ocs-scripts | FLAVORS=common,docker-based bash -e \
+ && /usr/local/sbin/builder-enter
 
 
 # Install packages
@@ -77,10 +75,9 @@ RUN apt-get -q update && \
 
 
 # Patch rootfs
-# - Add ocs-scripts
 # - Tweaks rootfs so it matches Online Labs infrastructure
-RUN wget -qO - http://j.mp/ocs-scripts | FLAVORS=docker-based,sysvinit bash
 RUN rm -f /etc/motd && ln -s /var/run/motd /etc/motd
+RUN curl -Lq http://j.mp/ocs-scripts | FLAVORS=common,docker-based,sysvinit bash -e
 ADD ./patches/etc/ /etc/
 
 
