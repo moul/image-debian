@@ -24,6 +24,7 @@ RUN apt-get -q update && \
     apt-get install -y -qq \
 	bash-completion \
 	bc \
+	bootlogd \
 	ca-certificates \
 	cron \
 	curl \
