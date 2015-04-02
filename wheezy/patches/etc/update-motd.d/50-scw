@@ -9,7 +9,7 @@ if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
 	DISTRIB_DESCRIPTION=$(lsb_release -s -d)
 fi
 
-[ -r /etc/ocs-release ] && . /etc/ocs-release
+[ -r /etc/scw-release ] && . /etc/scw-release
 
 METADATA=$(oc-metadata --cached)
 
@@ -40,7 +40,7 @@ fi
 
 cat<<EOF
 
-Welcome on $IMAGE_DESCRIPTION on Online Labs' C1.
+Welcome on $IMAGE_DESCRIPTION on Scaleway' C1.
 
  * Kernel:           $(uname -o) $(uname -r) $(uname -m) $KERNEL_TITLE
 EOF

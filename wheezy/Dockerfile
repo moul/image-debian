@@ -1,19 +1,19 @@
-## -*- docker-image-name: "armbuild/ocs-distrib-debian:wheezy" -*-
+## -*- docker-image-name: "armbuild/scw-distrib-debian:wheezy" -*-
 FROM armbuild/debian:wheezy
-MAINTAINER Online Labs <opensource@ocs.online.net> (@online_en)
+MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
  	    	    
 # Environment
 ENV DEBIAN_FRONTEND noninteractive
 # Useful for image inheritance
-ENV OCS_BASE_IMAGE armbuild/ocs-debian:wheezy
+ENV SCW_BASE_IMAGE armbuild/scw-debian:wheezy
 
 
 # Patch rootfs for docker-based builds
 RUN apt-get -y -q update \
  && apt-get -y -qq install bash curl lsb-release tar \
  && apt-get -y clean \
- && curl -Lq http://j.mp/ocs-scripts | FLAVORS=common,docker-based bash -e \
+ && curl -Lq http://j.mp/scw-skeleton | FLAVORS=common,docker-based bash -e \
  && /usr/local/sbin/builder-enter
 
 
@@ -76,9 +76,9 @@ RUN apt-get -q update && \
 
 
 # Patch rootfs
-# - Tweaks rootfs so it matches Online Labs infrastructure
+# - Tweaks rootfs so it matches Scaleway infrastructure
 RUN rm -f /etc/motd && ln -s /var/run/motd /etc/motd
-RUN curl -Lq http://j.mp/ocs-scripts | FLAVORS=common,docker-based,sysvinit bash -e
+RUN curl -Lq http://j.mp/scw-skeleton | FLAVORS=common,docker-based,sysvinit bash -e
 ADD ./patches/etc/ /etc/
 
 

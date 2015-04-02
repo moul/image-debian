@@ -1,9 +1,9 @@
-Official Debian images on Online Labs [![Build Status](https://travis-ci.org/online-labs/image-debian.svg?branch=master)](https://travis-ci.org/online-labs/image-debian)
+Debian images on Scaleway [![Build Status](https://travis-ci.org/scaleway/image-debian.svg?branch=master)](https://travis-ci.org/scaleway/image-debian)
 =====================================
 
-Scripts to build the official Debian images on Online Labs
+Scripts to build the official Debian images on Scaleway
 
-These images are built using [Image Tools](https://github.com/online-labs/image-tools) and depends on the [armhf port of debian docker images](https://registry.hub.docker.com/u/armbuild/debian/) and scripts from [ocs-scripts](https://github.com/online-labs/ocs-scripts).
+These images are built using [Image Tools](https://github.com/scaleway/image-tools) and depends on the [armhf port of debian docker images](https://registry.hub.docker.com/u/armbuild/debian/).
 
 <img src="http://upload.wikimedia.org/wikipedia/commons/4/4a/Debian-OpenLogo.svg" width="100px" />
 
@@ -13,7 +13,7 @@ These images are built using [Image Tools](https://github.com/online-labs/image-
 
 We use the Docker's building system and convert it at the end to a disk image that will boot on real servers without Docker. Note that the image is still runnable as a Docker container for debug or for inheritance.
 
-[More info](https://github.com/online-labs/image-tools#docker-based-builder)
+[More info](https://github.com/scaleway/image-tools#docker-based-builder)
 
 Available tags
 --------------
@@ -25,11 +25,11 @@ Available tags
 Install
 -------
 
-Build and write the image to /dev/nbd1 (see [documentation](https://doc.cloud.online.net/howto/create_image.html))
+Build and write the image to `/dev/nbd1` (see [documentation](https://www.scaleway.com/docs/create_an_image_with_docker))
 
     $ make install
 
-Full list of commands available at: [online-labs/image-tools](https://github.com/online-labs/image-tools/tree/master#commands)
+Full list of commands available at: [scaleway/image-tools](https://github.com/scaleway/image-tools/#commands)
 
 ---
 
@@ -38,8 +38,8 @@ Links
 
 - [Community: Official Debian Image](https://community.cloud.online.net/t/official-debian-image/344/11?u=manfred)
 - [Community: New Linux Distributions on C1](https://community.cloud.online.net/t/official-new-linux-distributions-ubuntu-coreos-centos-fedora-arch-linux/229?u=manfred)
-- [Image on Docker registry](https://registry.hub.docker.com/u/armbuild/ocs-distrib-debian/)
+- [Image on Docker registry](https://registry.hub.docker.com/u/armbuild/scw-distrib-debian/)
 
 ---
 
-A project by [![Online Labs](https://raw.githubusercontent.com/online-labs/doc.cloud.online.net/master/www/documentation/docs_public/contents/images/logo_footer.png)](http://labs.online.net/)
+A project by [![Scaleway](https://avatars1.githubusercontent.com/u/5185491?v=3&s=42)](https://www.scaleway.com/)
