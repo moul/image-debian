@@ -29,4 +29,4 @@ $(PROXYFIED_COMMANDS):
 
 
 docker-rules.mk:
-	wget -qO - http://j.mp/scw-image-tools | bash
+	wget -qO - http://j.mp/scw-builder | bash
