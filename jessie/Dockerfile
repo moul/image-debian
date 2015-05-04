@@ -13,7 +13,7 @@ ENV SCW_BASE_IMAGE armbuild/scw-debian:jessie
 RUN apt-get -y -q update \
  && apt-get -y -qq install bash curl lsb-release tar \
  && apt-get -y clean \
- && curl -Lq http://j.mp/scw-skeleton | FLAVORS=common,docker-based bash -e \
+ && curl -Lq http://j.mp/scw-skeleton | FLAVORS=common,docker-based,systemd bash -e \
  && /usr/local/sbin/builder-enter
 
 
