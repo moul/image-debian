@@ -75,13 +75,6 @@ RUN apt-get -q update && \
     && apt-get clean
 
 
-# Patch rootfs
-# - Tweaks rootfs so it matches Scaleway infrastructure
-RUN rm -f /etc/motd && ln -s /var/run/motd /etc/motd
-RUN curl -Lq http://j.mp/scw-skeleton | FLAVORS=common,docker-based,systemd bash -e
-ADD ./patches/etc/ /etc/
-
-
 # Configure locales
 RUN locale-gen
 
@@ -90,6 +83,9 @@ RUN locale-gen
 RUN systemctl enable oc-ssh-keys \
  && systemctl enable oc-add-extra-volumes \
  && systemctl enable oc-sync-kernel-modules
+
+
+RUN rm -f /sbin/init && cp /lib/systemd/systemd /sbin/init
 
 
 # Clean rootfs from image-builder
