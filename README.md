@@ -18,7 +18,8 @@ We use the Docker's building system and convert it at the end to a disk image th
 Available tags
 --------------
 
-- wheezy (7.7, 7, latest)
+- wheezy (7.7, 7)
+- jessie (8, latest)
 
 ---
 
