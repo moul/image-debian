@@ -80,17 +80,18 @@ RUN locale-gen
 RUN systemctl set-default multi-user
 
 # Configure Systemd
-RUN systemctl enable oc-ssh-keys \
+RUN systemctl enable oc-fetch-ssh-keys \
  && systemctl enable oc-sync-kernel-modules \
+ && systemctl enable oc-generate-ssh-keys \
+ && systemctl enable oc-add-extra-volumes \
  && systemctl mask systemd-modules-load.service \
  && systemctl mask dev-ttyS0.device \
  && systemctl mask systemd-update-utmp-runlevel \
  && systemctl mask proc-sys-fs-binfmt_misc.automount
 
-#&& systemctl enable oc-add-extra-volumes \
-
 
 RUN rm -f /sbin/init && cp /lib/systemd/systemd /sbin/init
+
 
 # Clean rootfs from image-builder
 RUN /usr/local/sbin/builder-leave
