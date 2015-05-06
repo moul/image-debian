@@ -76,18 +76,23 @@ RUN apt-get -q update && \
 # Configure locales
 RUN locale-gen
 
-# default target
+
+# Default target
 RUN systemctl set-default multi-user
 
+
 # Configure Systemd
-RUN systemctl enable oc-fetch-ssh-keys \
- && systemctl enable oc-sync-kernel-modules \
- && systemctl enable oc-generate-ssh-keys \
- && systemctl enable oc-add-extra-volumes \
- && systemctl mask systemd-modules-load.service \
- && systemctl mask dev-ttyS0.device \
- && systemctl mask systemd-update-utmp-runlevel \
- && systemctl mask proc-sys-fs-binfmt_misc.automount
+RUN systemctl enable \
+        oc-fetch-ssh-keys \
+	oc-sync-kernel-modules \
+	oc-generate-ssh-keys \
+	oc-add-extra-volumes \
+ && systemctl mask \
+	systemd-modules-load.service \
+	dev-ttyS0.device \
+	systemd-update-utmp-runlevel \
+	proc-sys-fs-binfmt_misc.automount \
+	kmod-static-nodes.service
 
 
 RUN rm -f /sbin/init && cp /lib/systemd/systemd /sbin/init
