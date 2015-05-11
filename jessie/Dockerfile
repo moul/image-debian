@@ -87,7 +87,7 @@ RUN systemctl enable \
 	oc-sync-kernel-modules \
 	oc-generate-ssh-keys \
 	oc-add-extra-volumes \
- && systemctl mask \
+ && systemctl disable \
 	systemd-modules-load.service \
 	dev-ttyS0.device \
 	systemd-update-utmp-runlevel \
