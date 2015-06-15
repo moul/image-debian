@@ -90,10 +90,11 @@ RUN systemctl enable \
 	oc-add-extra-volumes \
  && systemctl disable \
 	systemd-modules-load.service \
-	dev-ttyS0.device \
 	systemd-update-utmp-runlevel \
 	proc-sys-fs-binfmt_misc.automount \
-	kmod-static-nodes.service
+	kmod-static-nodes.service \
+ && systemctl mask \
+        dev-ttyS0.device
 
 
 RUN rm -f /sbin/init && cp /lib/systemd/systemd /sbin/init
