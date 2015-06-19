@@ -88,6 +88,7 @@ RUN systemctl enable \
 	oc-sync-kernel-modules \
 	oc-generate-ssh-keys \
 	oc-add-extra-volumes \
+	oc-gen-machine-id \
  && systemctl disable \
 	systemd-modules-load.service \
 	systemd-update-utmp-runlevel \
