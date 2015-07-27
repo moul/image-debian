@@ -98,7 +98,7 @@ RUN systemctl enable \
         dev-ttyS0.device
 
 
-RUN rm -f /sbin/init && cp /lib/systemd/systemd /sbin/init
+RUN rm -f /sbin/init && ln -sf /lib/systemd/systemd /sbin/init
 
 
 # Clean rootfs from image-builder
